@@ -1,0 +1,1 @@
+mn create-app com-mygroup-groovyDemo --profile service --lang groovy --build gradle--features spock
