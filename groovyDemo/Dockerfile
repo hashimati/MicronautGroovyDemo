@@ -1,4 +1,4 @@
 FROM adoptopenjdk/openjdk11-openj9:jdk-11.0.1.13-alpine-slim
-COPY build/libs/com.mygroup.groovytest-*-all.jar groovyTest.jar
+COPY build/libs/com.mygroup.groovydemo-*-all.jar groovyDemo.jar
 EXPOSE 8080
-CMD java -Dcom.sun.management.jmxremote -noverify ${JAVA_OPTS} -jar groovyTest.jar
+CMD java -Dcom.sun.management.jmxremote -noverify ${JAVA_OPTS} -jar groovyDemo.jar

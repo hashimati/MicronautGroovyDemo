@@ -19,6 +19,7 @@ dependencies {
 	annotationProcessor platform("io.micronaut:micronaut-bom:$micronautVersion")
 	compile 'com.google.googlejavaformat:google-java-format:1.7'
 	compile 'io.micronaut:micronaut-views'
+	compile group: 'io.projectreactor', name: 'reactor-core', version: '3.3.1.RELEASE'
 	compileOnly "io.micronaut:micronaut-inject-groovy"
 	implementation "io.micronaut:micronaut-http-client"
 	implementation "io.micronaut:micronaut-http-server-netty"
@@ -33,16 +34,11 @@ dependencies {
 	testCompile "io.micronaut.test:micronaut-test-spock"
 	testCompile "io.micronaut:micronaut-inject-groovy"
 	testCompile "org.spockframework:spock-core"
-	testRuntimeOnly "org.junit.vintage:junit-vintage-engine:5.5.0"
-
-	// https://mvnrepository.com/artifact/io.projectreactor/reactor-core
-	compile group: 'io.projectreactor', name: 'reactor-core', version: '3.3.1.RELEASE'
-	// https://mvnrepository.com/artifact/io.projectreactor/reactor-test
 	testCompile group: 'io.projectreactor', name: 'reactor-test', version: '3.3.1.RELEASE'
-
+	testRuntimeOnly "org.junit.vintage:junit-vintage-engine:5.5.0"
 }
 test.classpath += configurations.developmentOnly
-mainClassName = "com.mygroup.groovyDemo.Application"
+mainClassName = "com.mygroup.groovydemo.Application"
 tasks.withType(GroovyCompile) {
     groovyOptions.forkOptions.jvmArgs.add('-Dgroovy.parameters=true')
 }

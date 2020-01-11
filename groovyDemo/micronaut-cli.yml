@@ -1,5 +1,5 @@
 profile: service
-defaultPackage: com.mygroup.groovyDemo
+defaultPackage: com.mygroup.groovydemo
 ---
 testFramework: spock
 sourceLanguage: groovy
